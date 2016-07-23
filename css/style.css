@@ -1,0 +1,194 @@
+
+/* ------------------ Universal Styling ------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ------------------ RE-USABLE COMPONENTS ------------------ */
+
+.row { 
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.row-short {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+section {
+padding: 50px 0;
+}
+
+/* ------------------ HEADINGS ------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #1f1f1f;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #8C2328;
+}
+
+
+
+/* Button Styling */
+
+.btn-menu-c {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: #8b8b8b;
+    border: 2px solid #f0f0f0;
+}
+
+.btn-menu-c:focus {
+  color: #e6e6e6;
+  background-color: #9C3C3E;
+  border-color: #f0f0f0;
+}
+.btn-menu-c:hover {
+  color: #e6e6e6;
+  background-color: #9C3C3E;
+  border-color: #f0f0f0;
+}
+
+/* Navbar Styling */
+/* http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0 */
+
+
+.navbar {
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #f09292;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #f09292;
+  background-color: transparent;
+
+}
+
+
+
+/* Header */
+
+.hero-text h1{
+    color: #fff;
+    text-align: center;
+    padding-top: 150px; /* need padding because of [nav-fixed-top] class */
+}
+
+.hero-text h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('../img/MassageTherapy.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.col-centered{
+float: none;
+margin: 0 auto;
+}
+
+/* Section Intro */
+
+.section-intro h2 {
+    margin-bottom: 20px;
+}
+
+/* Section Menu */
+
+.section-menu {
+    background-image: linear-gradient(rgba(70, 70, 70, 0.50), rgba(70, 70, 70, 0.45)), url('../img/massage-hot-towels.jpg');
+    background-size: cover;
+    padding: 100px;
+}
+
+.section-menu h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.center-inner-col {
+    display: table;
+    margin: 0 auto;
+}
+
+
+/* Section Features */
+
+.section-features {
+     padding: 100px;
+}
+
+.section-features h1 {
+    text-align: center;
+}
+
+.section-features h3,
+
+.section-features h4 {
+    text-align: center;
+}
+
+.section-features p{
+    margin: 20px 0px;
+    text-align: center;
+}
+
+
+
+.icon-header {
+    height: 60px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+/* Section Contact */
+
+.section-contact {
+    background-color: #8C2328;
+    margin-bottom:0px;
+}
+
+.section-contact h3,
+.section-contact p{
+    color: #fff;
+}
