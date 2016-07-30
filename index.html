@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,7 +79,7 @@
             </nav>
             
              <div class="hero-text">
-                <h1>The Health Massage 1.0</h1>
+                <h1>The Health Massage</h1>
                 <h3>Best Massage from China to Plano</h3>
              </div>
             <br>
@@ -90,6 +90,56 @@
             </div>
         </header>
         
+<!--div id="appointment" class="container-fluid text-center" ng-controller="appointmentCtrl">
+
+<h2>Appointment</h2>
+<h4>Date:{{DateTime}}</h4>
+<div id="thanks" style="color:red; font-size:medium"><p>To make reservation, click [Book it].</p></div>
+<div id="message" style="color:red; font-size:medium" ng-show="message.length>0">{{message}}</div>
+<div>
+    <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3"><label>Services:</label></div>
+          <!--<div class="col-sm-3"><select name="Service" ng-model="Service" style="width:200px" ng-options="service as service.Name for service in services" ></select></div>-->
+          <!--<div class="col-sm-3">{{services}}</div>>
+         <div class="col-sm-3"></div>
+    </div>
+    <!--
+    <label>Services:</label>
+    <select name="Service" ng-model="Service" style="width:200px" ng-options="service as service.Name for service in services" ></select>
+    >
+</div>
+<table class="table">
+<thead>
+    <tr>
+        <th style="width: 50px;">Id</th>
+        <th style="width: 150px;">Start Time</th>
+        <th style="width: 200px;">End Time</th>
+        <th style="width: 200px;">Status</th>
+        <th style="width: 200px;">Reservation</th>
+    </tr>
+</thead>
+<tbody>
+    <tr ng-repeat="line in lines" class="border_bottom">
+         <td>{{line.split('\t')[0]}}</td>
+         <td>{{line.split('\t')[1]}}</td>
+         <td>{{line.split('\t')[2]}}</td>
+         <td>{{line.split('\t')[3]}}</td>
+         <!--<th style="width: 200px;"><button type="button" class="btn btn-primary" ng-show="!isBooked(line)"  ng-click="reserve(line)" >Book It</button></th>>
+         <th><button type="button" ng-show="!isBooked(line)"  class="open-ReserveDialog btn btn-primary" data-id="{{line.split('\t')[0]}}-{{line.split('\t')[1]}}-{{line.split('\t')[2]}}" data-toggle="modal" data-target="#myModal">Book It</button></th>
+    </tr>
+</tbody>
+</table>
+<ul class="pagination-controle pagination">
+<!-- ng-disabled="curPage == 0"  apply this for customer>
+<button type="button" class="btn btn-primary"   ng-click="goPrev()"> &lt; PREV</button>
+<button type="button" class="btn btn-primary" ng-click="goToday()">Today</button>
+<button type="button" id="refresh" class="btn btn-primary" ng-click="refresh()">Refresh</button>
+<button type="button" class="btn btn-primary" ng-click="goNext()">NEXT &gt;</button>
+</ul>
+</div-->
+
+        
         <section class="section-intro">
             <div class="row-short">
                 <h1>Grand Opening!</h1>
@@ -99,7 +149,7 @@
             
         </section>
         
-         <section class="section-menu" id="service">
+        <section class="section-menu" id="service">
             <h1>Our Service</h1>
             <div class="row">
                 <!--div class="col-md-8 col-md-offset-2">
@@ -130,7 +180,7 @@
                                 <div class="card-block">
                                     <h4 class="card-title">60 min | $59</h4>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Reserve Now!</a>
+                                    <a href="#" class="btn btn-success">Reserve Now!</a>
                                 </div>
                             </div>
                             <div class="card" style="width:318px;">
@@ -141,7 +191,7 @@
                                 <div class="card-block">
                                     <h4 class="card-title">60 min | $59</h4>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Reserve Now!</a>
+                                    <a href="#" class="btn btn-success">Reserve Now!</a>
                                 </div>
                             </div>
                             <div class="card" style="width:318px;">
@@ -152,7 +202,7 @@
                                 <div class="card-block">
                                     <h4 class="card-title">60 min | $59</h4>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Reserve Now!</a>
+                                    <a href="#" class="btn btn-success">Reserve Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +240,7 @@
                 <td>Available</td>
                 <td>2</td>
                 <td>Tina</td>
-                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Book</button></td>
+                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Book</button></td>
             </tr>
             <tr>
                 <th scope="row">2</th>
@@ -199,7 +249,7 @@
                 <td>Available</td>
                 <td>3</td>
                 <td>Candy</td>
-                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Book</button></td>
+                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Book</button></td>
             </tr>
             <tr>
                 <th scope="row">3</th>
@@ -208,7 +258,7 @@
                 <td>Available</td>
                 <td>3</td>
                 <td>Lily</td>
-                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Book</button></td>
+                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Book</button></td>
             </tr>
             <tr>
                 <th scope="row">4</th>
@@ -217,16 +267,17 @@
                 <td>Available</td>
                 <td>3</td>
                 <td>Angela</td>
-                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Book</button></td>
+                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Book</button></td>
             </tr>
         </tbody>
     </table>
+    
         </div>
             <div class="row" style="text-align: center;">
             <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary">PREV</button>
             <button type="button" class="btn btn-success">TODAY</button>
-            <button type="button" class="btn btn-warning">REFRESH</button>
+            <!--button type="button" class="btn btn-warning">REFRESH</button-->
             <button type="button" class="btn btn-danger">NEXT</button>
             </div>
             </div>
@@ -308,23 +359,22 @@
                 </div>
             </div>
         </section>
-        <div>
-        Test
-        </div>
+
+        
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/angular-resource.min.js"></script>
     <script src="js/angular-ui-router.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/service.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-ui-bootstrap.js"></script>
+    <script src="js/appointmentCtrl.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
+    <script src="https://rawgit.com/wenzhixin/bootstrap-table/master/dist/bootstrap-table.min.js"></script>
   
     </body>
 </html>
